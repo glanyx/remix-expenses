@@ -1,7 +1,10 @@
 
-export interface IExpense {
+export interface IExpense extends IExpenseData {
   id: string
+}
+
+export interface IExpenseData {
   title: string
-  amount: number
+  amount: string
   date: string
 }
