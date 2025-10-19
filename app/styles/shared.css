@@ -1,119 +1,3 @@
-@import "tailwindcss";
-
-@layer base {
-
-  * {
-    box-sizing: border-box;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    display: block;
-    font-weight: bold;
-  }
-
-  h1 {
-    font-size: var(--text-4xl);
-    margin: 0.67em 0;
-  }
-  h2 {
-    font-size: var(--text-2xl);
-    margin: 0.83em 0;
-  }
-  h3 {
-    font-size: var(--text-xl);
-    margin: 1em 0;
-  }
-
-  p {
-    display: block;
-    margin: 1em 0;
-  }
-
-  ul, ol {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  main {
-    margin: 2rem auto;
-    max-width: 45rem;
-  }
-
-  button {
-    font: inherit;
-    cursor: pointer;
-    padding: 0.5rem 1.75rem;
-    border-radius: 4px;
-  }
-
-}
-
-@theme {
-  --font-sans: "Rubik", sans-serif;
-
-  --color-gray-10: #f6f2fc;
-  --color-gray-50: #f0eafa;
-  --color-gray-100: #ded8e8;
-  --color-gray-200: #c1bcc9;
-  --color-gray-300: #aba6b3;
-  --color-gray-400: #96929d;
-  --color-gray-500: #7f7b85;
-  --color-gray-600: #69666f;
-  --color-gray-700: #514f55;
-  --color-gray-800: #403e44;
-  --color-gray-900: #2e2c32;
-
-  --color-primary-10: #ede3fd;
-  --color-primary-50: #c9aaff;
-  --color-primary-100: #af82fc;
-  --color-primary-200: #975bfd;
-  --color-primary-300: #8845fc;
-  --color-primary-400: #7223fa;
-  --color-primary-500: #5d00ff;
-  --color-primary-600: #5402e3;
-  --color-primary-700: #4a02c6;
-  --color-primary-800: #3c02a1;
-
-  --color-secondary-500: #9900ff;
-  --color-secondary-600: #8400ff;
-  --color-secondary-700: #7500ce;
-
-  --animate-fade-slide-up: fade-slide-up 1s ease-out forwards;
-  --animate-fade-slide-down: fade-slide-down 1s ease-out forwards;
-
-  @keyframes fade-slide-up {
-    from {
-      opacity: 0;
-      transform: translateY(1rem);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes fade-slide-down {
-    from {
-      opacity: 0;
-      transform: translateY(-1rem);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-}
-
-html,
-body {
-  @apply bg-white dark:bg-gray-950;
-
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
-  }
-}
 
 #main-header {
   padding: 1rem 10%;
@@ -204,13 +88,13 @@ body {
 
 .modal {
   position: fixed;
+  margin: 0.25rem auto !important;
   top: 25vh;
   width: 30rem;
   border-radius: 6px;
   border: none;
   background-color: var(--color-gray-50);
   animation: fade-slide-down 0.5s ease-out forwards;
-  margin: 0 auto;
 }
 
 .error {
@@ -253,7 +137,6 @@ body {
   border: none;
   width: 100%;
   color: var(--color-gray-600);
-  background-color: var(--color-gray-10);
 }
 
 .form-row {
@@ -302,3 +185,26 @@ body {
 .form a:hover {
   color: var(--color-primary-100);
 }
+
+@keyframes fade-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
